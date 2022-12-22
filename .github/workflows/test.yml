@@ -1,4 +1,4 @@
-name: Tracker testing
+name: Tracker
 
 on:
   push:
