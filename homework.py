@@ -59,7 +59,7 @@ class Training:
 
 class Running(Training):
     """Тренировка: бег."""
-    RATIO_CALORIES_SMALL: int = 18
+    RATIO_CALORIES_SMALL: int = 19
     RATIO_CALORIES_BIG: int = 20
 
     def get_spent_calories(self) -> float:
