@@ -1,4 +1,7 @@
+atomicwrites==1.4.1
 attrs==21.2.0
+colorama==0.4.6
+exceptiongroup==1.0.4
 flake8==4.0.1
 importlib-metadata==4.8.1
 iniconfig==1.1.1
@@ -9,8 +12,9 @@ py==1.10.0
 pycodestyle==2.8.0
 pyflakes==2.4.0
 pyparsing==2.4.7
-pytest==6.2.5
+pytest==7.2.0
 pytest-tldr==0.2.4
 toml==0.10.2
+tomli==2.0.1
 typing-extensions==3.10.0.2
 zipp==3.6.0
