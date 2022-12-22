@@ -1,6 +1,7 @@
 # Модуль фитнес-трекера
 Программный модуль фитнес-трекера, который обрабатывает данные для трех видов тренировок: 
 для бега, спортивной ходьбы и плавания.
+
 [![Testing](https://github.com/wurikavich/fitness_tracker/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/wurikavich/fitness_tracker/actions/workflows/test.yml) 
 
 ## Описание
