@@ -5,7 +5,6 @@ from typing import Dict, List, Type
 @dataclass
 class InfoMessage:
     """Информационное сообщение о тренировке."""
-
     training_type: str
     duration: float
     distance: float
@@ -23,7 +22,6 @@ class InfoMessage:
 
 class Training:
     """Базовый класс тренировки."""
-
     LEN_STEP: float = 0.65
     M_IN_KM: int = 1000
     TIME_IN_MINUTES: int = 60
@@ -56,13 +54,11 @@ class Training:
             self.duration,
             self.get_distance(),
             self.get_mean_speed(),
-            self.get_spent_calories()
-        )
+            self.get_spent_calories())
 
 
 class Running(Training):
     """Тренировка: бег."""
-
     RATIO_CALORIES_SMALL: int = 18
     RATIO_CALORIES_BIG: int = 20
 
@@ -76,7 +72,6 @@ class Running(Training):
 
 class SportsWalking(Training):
     """Тренировка: спортивная ходьба."""
-
     RATIO_CALORIES_SMALL: float = 0.029
     RATIO_CALORIES_BIG: float = 0.035
 
@@ -99,7 +94,6 @@ class SportsWalking(Training):
 
 class Swimming(Training):
     """Тренировка: плавание."""
-
     RATIO_CALORIES_SMALL: float = 1.1
     RATIO_CALORIES_BIG: int = 2
     LEN_STEP: float = 1.38
@@ -128,13 +122,11 @@ class Swimming(Training):
 
 def read_package(workout_type: str, data: List[int]) -> Training:
     """Прочитать данные полученные от датчиков."""
-
     type_training: Dict[str, Type[Training]] = {
         'SWM': Swimming,
         'RUN': Running,
         'WLK': SportsWalking
     }
-
     if workout_type not in type_training:
         raise ValueError(f"Такой тренировки - {workout_type}, не найдено")
     return type_training[workout_type](*data)
@@ -142,7 +134,6 @@ def read_package(workout_type: str, data: List[int]) -> Training:
 
 def main(training: Training) -> None:
     """Главная функция."""
-
     info = training.show_training_info()
     print(info.get_message())
 
