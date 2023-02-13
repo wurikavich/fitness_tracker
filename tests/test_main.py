@@ -221,7 +221,7 @@ def test_Swimming():
     swimming = main.Swimming
     swimming_signature = inspect.signature(swimming)
     swimming_signature_list = list(swimming_signature.parameters)
-    for param in ['action', 'duration', 'weight', 'length_pool', 'count_pool']:
+    for param in ['action', 'duration', 'weight', 'len_pool', 'count_pool']:
         assert param in swimming_signature_list, (
             'У метода `__init__` класса `Swimming` '
             f' должен быть параметр {param}.'
